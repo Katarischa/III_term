@@ -2,7 +2,7 @@
 
 #define c 2.9e10
 # define SI_length 1e-2
-#define SI_charge c*10e-1
+#define SI_charge c*1e-1
 #define SI_inductance 1/(c*c)*1e-9
 
 int main() {
