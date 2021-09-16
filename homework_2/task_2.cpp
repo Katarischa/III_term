@@ -28,8 +28,11 @@ std::vector<std::string> split(const std::string &line, std::string &split_char)
 
 int main() {
     std::string line;
+    std::cout << "Enter string" << std::endl;
     std::getline(std::cin, line);
-    std::string split_char(" ");
+    std::string split_char;
+    std::cout << "Enter separator" << std::endl;
+    std::getline(std::cin, split_char);
     auto output = split(line, split_char);
     for (auto word: output) {
         std::cout << '"' << word << '"' << std::endl;
