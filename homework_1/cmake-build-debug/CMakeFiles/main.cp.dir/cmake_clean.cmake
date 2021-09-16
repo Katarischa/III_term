@@ -1,0 +1,12 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/main.cp.dir/main.cpp.obj"
+  "libmain.cp.dll.a"
+  "main.cp.exe"
+  "main.cp.exe.manifest"
+  "main.cp.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/main.cp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
