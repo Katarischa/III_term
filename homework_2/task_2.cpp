@@ -16,7 +16,7 @@ std::vector<std::string> split(const std::string &line, std::string &split_char)
             } else {
                 tmp_string = line.substr(position_1, position_new - position_1);
                 line.substr(position_1, position_new - position_1);
-                position_1 = position_new + 1;
+                position_1 = position_new + split_char.length();
                 if (tmp_string.length() > 0) {
                     vec.push_back(tmp_string);
                 }
