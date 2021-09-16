@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-std:: vector<std:: string> split(const std:: string &line, std:: string &split_char) {
+std::vector<std::string> split(const std::string &line, std::string &split_char) {
     int position_1 = 0, position_new;
     bool flag = true;
     std::vector<std::string> vec;
@@ -23,14 +23,15 @@ std:: vector<std:: string> split(const std:: string &line, std:: string &split_c
             }
         }
     }
-        return vec;
+    return vec;
+}
+
+int main() {
+    std::string line;
+    std::getline(std::cin, line);
+    std::string split_char(" ");
+    auto output = split(line, split_char);
+    for (auto word: output) {
+        std::cout << '"' << word << '"' << std::endl;
     }
-    int main() {
-        std::string line;
-        std::getline(std::cin, line);
-        std::string split_char(" ");
-        auto output = split(line, split_char);
-        for (auto word: output) {
-            std::cout << '"' << word << '"' << std::endl;
-        }
-    }
+}
