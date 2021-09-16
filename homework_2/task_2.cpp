@@ -34,7 +34,7 @@ int main() {
     std::cout << "Enter separator" << std::endl;
     std::getline(std::cin, split_char);
     auto output = split(line, split_char);
-    for (auto word: output) {
+    for (auto&word: output) {
         std::cout << '"' << word << '"' << std::endl;
     }
 }
