@@ -6,6 +6,14 @@
 struct Vect {
     unsigned dim;
     std::vector<double> components;
+    double abs(){
+        int sum;
+        sum = 0;
+        for (unsigned i = 0; i < dim; i++){
+            components[i] *= components[i];
+            sum += components[i];
+        }
+        return pow(sum, 0.5);}
 };
 
 
@@ -100,6 +108,6 @@ int main() {
     Vect a, b, c;
     double lambda;
     std:: cin >> lambda >> a >> b >> c;
-    std:: cout << lambda * a <<" "<< b * lambda <<" "<< a + b <<" "<< a * b + c <<" "<< a - c <<" " << -a<<' '<<abs(a) << std:: endl;
+    std:: cout << lambda * a <<" "<< b * lambda <<" "<< a + b <<" "<< a * b + c <<" "<< a - c <<" " << -a<<' '<<a.abs() << std:: endl;
 
 }
