@@ -144,15 +144,49 @@ void set_components(std::vector<double>& components){
 int main() {
     DynamicVector dynamicVector(5)
     dynamicVector.set_components({5,2,6,146,45})
-    std:: cout <<"Our vector \n Dymansion is"
+    std:: cout <<"Our vector \n Dimension is"
 }
 ```
 
-Идиома RAII -- все что в диструкторе -- удаляется 
+### Идиома RAII -- все что в деструкторе -- удаляется 
 
 ```c++
 friend std::ostream& operator<<(std::operator& out, const DynamicVector& v){
 } 
 ```
 
+### Многофайловые проекты 
 
+Используем не .cpp, а используем .h
+
+Можем сослаться на часть кода, используя __#include ""__ 
+Пример:
+
+```c++
+#include "DynamicVector.h" //то, что было написанно человеком
+#include <vector> //дефолтная штука
+```
+
+### 3 этапа компиляции
+
+1. Препроцессинг
+2. Компиляция
+3. Сборка (линковка)
+
+Чтобы лишний раз не компилировать все по 2 кругу, заходим в CMakeList.txt 
+
+### Внутреннее и внешнее связывания
+
+В CMakeList.txt создаем новый add_executable
+
+Для импорта переменной используем extern (что-то там)
+
+Внешнее связывание -- возможность связываться с другим .ccp файлом (тот самый extern)
+
+Внутреннее связывание -- связываться с пространстом имен через namespace
+```c++
+using namespace Coastal{}
+int main(){
+    Coastal::sort
+}
+```
