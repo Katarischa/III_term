@@ -6,19 +6,28 @@
 #define III_TERM_TASK_3_PHYSICS_H
 
 #include <vector>
+static const double N_to_dyn = 1e5;
 
-class Force {
+class Force{
 public:
-    Force() = default;
+
+
+    Force():force({0,0,0}){};
+
+    Force(const std::vector<double> &force);
+
+    friend Force operator*(Force &a, double lambda);
 
     const std::vector<double> &get_force_in_N() const;
 
-    const std::vector<double> &get_force_in_dyn() const;
+    std::vector<double> get_force_in_dyn() const;
 
-    void set_force_in_N(const std::vector<double> &force);
+    void set_force_in_dyn( std::vector<double> new_force);
+
+    void set_force_in_N(const std::vector<double> &new_force);
 
 private:
-    std::vector<double> force = {0,0,0};
+    std::vector<double> force;
 };
 
 
