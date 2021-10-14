@@ -154,6 +154,32 @@ task_2.cpp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.cpp.dir\build.make CMakeFiles/task_2.cpp.dir/build
 .PHONY : task_2.cpp/fast
 
+#=============================================================================
+# Target rules for targets named task_4.cpp
+
+# Build rule for target.
+task_4.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 task_4.cpp
+.PHONY : task_4.cpp
+
+# fast build rule for target.
+task_4.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_4.cpp.dir\build.make CMakeFiles/task_4.cpp.dir/build
+.PHONY : task_4.cpp/fast
+
+#=============================================================================
+# Target rules for targets named task_3.cpp
+
+# Build rule for target.
+task_3.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 task_3.cpp
+.PHONY : task_3.cpp
+
+# fast build rule for target.
+task_3.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.cpp.dir\build.make CMakeFiles/task_3.cpp.dir/build
+.PHONY : task_3.cpp/fast
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -226,6 +252,54 @@ task_2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_2.cpp.dir\build.make CMakeFiles/task_2.cpp.dir/task_2.cpp.s
 .PHONY : task_2.cpp.s
 
+task_3.obj: task_3.cpp.obj
+.PHONY : task_3.obj
+
+# target to build an object file
+task_3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.cpp.dir\build.make CMakeFiles/task_3.cpp.dir/task_3.cpp.obj
+.PHONY : task_3.cpp.obj
+
+task_3.i: task_3.cpp.i
+.PHONY : task_3.i
+
+# target to preprocess a source file
+task_3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.cpp.dir\build.make CMakeFiles/task_3.cpp.dir/task_3.cpp.i
+.PHONY : task_3.cpp.i
+
+task_3.s: task_3.cpp.s
+.PHONY : task_3.s
+
+# target to generate assembly for a file
+task_3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_3.cpp.dir\build.make CMakeFiles/task_3.cpp.dir/task_3.cpp.s
+.PHONY : task_3.cpp.s
+
+task_4.obj: task_4.cpp.obj
+.PHONY : task_4.obj
+
+# target to build an object file
+task_4.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_4.cpp.dir\build.make CMakeFiles/task_4.cpp.dir/task_4.cpp.obj
+.PHONY : task_4.cpp.obj
+
+task_4.i: task_4.cpp.i
+.PHONY : task_4.i
+
+# target to preprocess a source file
+task_4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_4.cpp.dir\build.make CMakeFiles/task_4.cpp.dir/task_4.cpp.i
+.PHONY : task_4.cpp.i
+
+task_4.s: task_4.cpp.s
+.PHONY : task_4.s
+
+# target to generate assembly for a file
+task_4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task_4.cpp.dir\build.make CMakeFiles/task_4.cpp.dir/task_4.cpp.s
+.PHONY : task_4.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -237,6 +311,8 @@ help:
 	@echo ... main.cpp
 	@echo ... task_1.cpp
 	@echo ... task_2.cpp
+	@echo ... task_3.cpp
+	@echo ... task_4.cpp
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -246,6 +322,12 @@ help:
 	@echo ... task_2.obj
 	@echo ... task_2.i
 	@echo ... task_2.s
+	@echo ... task_3.obj
+	@echo ... task_3.i
+	@echo ... task_3.s
+	@echo ... task_4.obj
+	@echo ... task_4.i
+	@echo ... task_4.s
 .PHONY : help
 
 
