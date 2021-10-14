@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Marina/CLionProjects/III_term/homework_5/task_2.cpp
+task_2_Vector.h
+C:/Users/Marina/CLionProjects/III_term/homework_5/task_2_Vector.h
+iostream
+-
+vector
+-
+
+C:/Users/Marina/CLionProjects/III_term/homework_5/task_2_Vector.cpp
+vector
+-
+task_2_Vector.h
+C:/Users/Marina/CLionProjects/III_term/homework_5/task_2_Vector.h
+cmath
+-
+iostream
+-
+
+C:/Users/Marina/CLionProjects/III_term/homework_5/task_2_Vector.h
+vector
+-
+

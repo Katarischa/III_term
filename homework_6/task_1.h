@@ -16,7 +16,7 @@ public:
     smart_double() = default;
     smart_double(const smart_double& smart) = delete;
 
-    smart_double& operator=(const smart_double smart) = delete;
+    smart_double& operator=(const smart_double& smart) = delete;
     smart_double(smart_double&& smart) noexcept ;
 
 

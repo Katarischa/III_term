@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Marina/CLionProjects/III_term/homework_5/lec_9_10_21.cpp
+string
+C:/Users/Marina/CLionProjects/III_term/homework_5/string
+vector
+C:/Users/Marina/CLionProjects/III_term/homework_5/vector
+iostream
+C:/Users/Marina/CLionProjects/III_term/homework_5/iostream
+

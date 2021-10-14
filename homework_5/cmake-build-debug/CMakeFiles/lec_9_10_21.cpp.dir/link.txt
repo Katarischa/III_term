@@ -1,0 +1,3 @@
+C:\Users\Marina\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\lec_9_10_21.cpp.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\lec_9_10_21.cpp.dir/objects.a @CMakeFiles\lec_9_10_21.cpp.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\lec_9_10_21.cpp.dir/objects.a -Wl,--no-whole-archive -o lec_9_10_21.cpp.exe -Wl,--out-implib,liblec_9_10_21.cpp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\lec_9_10_21.cpp.dir\linklibs.rsp

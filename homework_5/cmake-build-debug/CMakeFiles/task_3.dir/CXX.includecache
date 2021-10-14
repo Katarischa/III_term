@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Marina/CLionProjects/III_term/homework_5/task_3.cpp
+task_3_physics.h
+C:/Users/Marina/CLionProjects/III_term/homework_5/task_3_physics.h
+iostream
+-
+
+C:/Users/Marina/CLionProjects/III_term/homework_5/task_3_physics.cpp
+task_3_physics.h
+C:/Users/Marina/CLionProjects/III_term/homework_5/task_3_physics.h
+
+C:/Users/Marina/CLionProjects/III_term/homework_5/task_3_physics.h
+vector
+-
+

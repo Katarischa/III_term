@@ -1,0 +1,7 @@
+C:/Users/Marina/CLionProjects/III_term/homework_5/cmake-build-debug/CMakeFiles/task_4_2.cpp.dir
+C:/Users/Marina/CLionProjects/III_term/homework_5/cmake-build-debug/CMakeFiles/task_2.dir
+C:/Users/Marina/CLionProjects/III_term/homework_5/cmake-build-debug/CMakeFiles/task_3.dir
+C:/Users/Marina/CLionProjects/III_term/homework_5/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Marina/CLionProjects/III_term/homework_5/cmake-build-debug/CMakeFiles/task_4.cpp.dir
+C:/Users/Marina/CLionProjects/III_term/homework_5/cmake-build-debug/CMakeFiles/lec_9_10_21.cpp.dir
+C:/Users/Marina/CLionProjects/III_term/homework_5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
