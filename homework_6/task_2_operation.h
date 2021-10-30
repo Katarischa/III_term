@@ -112,6 +112,7 @@ private:
         }
 
     };
+};
 
 
 #endif //III_TERM_TASK_2_OPERATION_H

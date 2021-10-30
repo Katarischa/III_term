@@ -4,7 +4,7 @@
 
 #include "task_2_operation.h"
 
-Fraction operator+(Fraction a, Fraction b) {
+Fraction operator + (Fraction a, Fraction b) {
     Fraction c;
     c.denominator = a.denominator * b.denominator;
     c.numerator = a.numerator * b.denominator + b.numerator * a.denominator;
@@ -37,7 +37,7 @@ Fraction operator/(Fraction a, Fraction b) {
         c.denominator = a.denominator * den;
         c.numerator = a.numerator * num;
         c.simplify_fraction();
-    } else std::cout << 'Error! Division by 0' << std::endl;
+    } else {std::cout << 'Error! Division by 0' << std::endl;}
     return c;
 }
 
@@ -94,13 +94,5 @@ Fraction Fraction::operator--(int) {
     Fraction temp(*this);
     numerator -= int(denominator);
     return temp;
-}
-
-Fraction &Fraction::operator=(Fraction frac) {
-    numerator = frac.numerator;
-    denominator = frac.denominator;
-    return *this;
-}
-
 }
 

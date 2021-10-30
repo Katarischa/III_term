@@ -7,7 +7,7 @@
 int main() {
     Fraction a, b, c;
     std::cin >> a >> b >> c;
-    a += b * c;
+    a = b * c;
     std::cout << a << std::endl;
     b.set_denominator(5);
     c.get_numerator();
