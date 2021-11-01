@@ -17,7 +17,7 @@ public:
             numerator(new_numerator), denominator(new_denominator) { simplify_fraction(); }
 
     //operation of input-output
-    friend std::istream &operator>>(std::istream &, Fraction a);
+    friend std::istream &operator>>(std::istream &, Fraction &a);
 
     friend std::ostream &operator<<(std::ostream &, Fraction a);
 

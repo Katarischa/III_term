@@ -8,9 +8,10 @@ int main() {
     Fraction a, b, c;
     std::cin >> a >> b >> c;
     a = b * c;
-    std::cout << a << std::endl;
+    b /= c;
+    std::cout << a << b << std::endl;
+    a++;
     b.set_denominator(5);
-    c.get_numerator();
     std::cout << b << std::endl;
 
     return 0;

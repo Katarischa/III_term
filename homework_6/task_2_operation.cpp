@@ -31,13 +31,13 @@ Fraction operator-(Fraction a, Fraction b) {
 Fraction operator/(Fraction a, Fraction b) {
     Fraction c;
     int num;
-    num = (b.numerator / abs(b.numerator)) * b.denominator;
+    num = (b.numerator > 0 ? 1 : -1) * static_cast<int>(b.denominator);
     unsigned den = abs(b.numerator);
     if (num != 0) {
         c.denominator = a.denominator * den;
         c.numerator = a.numerator * num;
         c.simplify_fraction();
-    } else {std::cout << 'Error! Division by 0' << std::endl;}
+    } else {std::cout << "Error! Division by 0" << std::endl;}
     return c;
 }
 
@@ -46,7 +46,7 @@ Fraction operator+=(Fraction a, Fraction b) {
     return a;
 }
 
-std::istream &operator>>(std::istream &in, Fraction a) {
+std::istream &operator>>(std::istream &in, Fraction &a ) {
     in >> a.numerator >> a.denominator;
     return in;
 }
