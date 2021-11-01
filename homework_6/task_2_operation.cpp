@@ -1,7 +1,3 @@
-//
-// Created by Marina on 20.10.2021.
-//
-
 #include "task_2_operation.h"
 
 Fraction operator + (Fraction a, Fraction b) {

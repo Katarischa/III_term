@@ -1,7 +1,3 @@
-//
-// Created by Marina on 20.10.2021.
-//
-
 #ifndef III_TERM_TASK_2_OPERATION_H
 #define III_TERM_TASK_2_OPERATION_H
 
