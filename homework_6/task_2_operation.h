@@ -4,13 +4,26 @@
 #include <iostream>
 #include <cmath>
 
+
+class ZeroDivisionException : public std::exception {
+public:
+    const char *what() const noexcept override {
+        return "Error: division by zero";
+    }
+};
+
 class Fraction {
 public:
     // constructor
     Fraction() = default;
 
     Fraction(int new_numerator, unsigned new_denominator) :
-            numerator(new_numerator), denominator(new_denominator) { simplify_fraction(); }
+            numerator(new_numerator), denominator(new_denominator) {
+        if (new_denominator == 0) {
+            throw ZeroDivisionException();
+        }
+        simplify_fraction();
+    }
 
     //operation of input-output
     friend std::istream &operator>>(std::istream &, Fraction &a);

@@ -1,6 +1,6 @@
 #include "task_2_operation.h"
 
-Fraction operator + (Fraction a, Fraction b) {
+Fraction operator+(Fraction a, Fraction b) {
     Fraction c;
     c.denominator = a.denominator * b.denominator;
     c.numerator = a.numerator * b.denominator + b.numerator * a.denominator;
@@ -29,11 +29,10 @@ Fraction operator/(Fraction a, Fraction b) {
     int num;
     num = (b.numerator > 0 ? 1 : -1) * static_cast<int>(b.denominator);
     unsigned den = abs(b.numerator);
-    if (num != 0) {
-        c.denominator = a.denominator * den;
-        c.numerator = a.numerator * num;
-        c.simplify_fraction();
-    } else {std::cout << "Error! Division by 0" << std::endl;}
+    c.denominator = a.denominator * den;
+    c.numerator = a.numerator * num;
+    c.simplify_fraction();
+    if (b.numerator == 0) { throw ZeroDivisionException(); }
     return c;
 }
 
@@ -42,8 +41,9 @@ Fraction operator+=(Fraction a, Fraction b) {
     return a;
 }
 
-std::istream &operator>>(std::istream &in, Fraction &a ) {
+std::istream &operator>>(std::istream &in, Fraction &a) {
     in >> a.numerator >> a.denominator;
+    if (a.denominator == 0) { throw ZeroDivisionException(); }
     return in;
 }
 
