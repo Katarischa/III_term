@@ -6,9 +6,8 @@
 #define III_TERM_TASK_2_H
 
 
-#ifndef III_TERM_TASK_1_H
-#define III_TERM_TASK_1_H
-
+#include <cmath>
+#include <iostream>
 #include <vector>
 
 template<typename T>
@@ -28,23 +27,65 @@ public:
     Vector(unsigned new_dimension) :
             components(new_dimension), dimension(new_dimension) {}
 
-    double abs();
+    T abs() {
+        int sum;
+        sum = 0;
+        for (auto i = 0u; i < dimension; i++) {
+            components[i] *= components[i];
+            sum += components[i];
+        }
+        return pow(sum, 0.5);
+    }
 
-    friend Vector operator*(Vector a, double lambda);
+    friend Vector operator*(Vector a, double lambda) {
 
-    friend Vector operator*(double lambda, Vector a);
+        for (auto i = 0u; i < a.dimension; i++) {
+            a.components[i] *= lambda;
+        }
+        return a;
+    }
 
-    friend Vector operator+(Vector a, Vector b);
+    friend Vector operator*(double lambda, Vector a) {
+        return a * lambda;
+    }
 
-    friend Vector operator-(Vector b, Vector a);
+    friend Vector operator+(Vector a, Vector b) {
+        if (a.dimension == b.dimension) {
+            for (auto i = 0u; i < a.dimension; i++) {
+                a.components[i] += b.components[i];
+            }
+            return a;
+        }
+        std::cout << "error" << std::endl;
+    }
 
-    const std::vector<T> &get_components() const;
+    friend Vector operator-(Vector b, Vector a) {
+        if (a.dimension == b.dimension) {
+            for (auto i = 0u; i < a.dimension; i++) {
+                b.components[i] -= a.components[i];
+            }
+            return b;
+        }
+        std::cout << "error" << std::endl;
+    }
 
-    unsigned get_dimension() const;
+    const std::vector<T> &get_components() const {
+        return components;
+    }
 
-    void set_dimension(unsigned dimension);
+    unsigned get_dimension() const {
+        return dimension;
+    }
 
-    void set_components(const std::vector<T> &components);
+    void set_dimension(unsigned new_dimension) {
+        dimension = new_dimension;
+        components.resize(dimension);
+    }
+
+    void set_components(const std::vector<T> &new_components) {
+        dimension = new_components.size();
+        components = new_components;
+    }
 
 
 private:
@@ -53,8 +94,6 @@ private:
     unsigned dimension;
 };
 
-
-#endif //III_TERM_TASK_1_H
 
 
 #endif //III_TERM_TASK_2_H

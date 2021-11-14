@@ -4,11 +4,11 @@
 
 int main() {
 
-    Vector a({2, 3, 4});
-    Vector b(3);
-    Vector c;
+    Vector<int> a({2, 3, 4});
+    Vector<int> b(3);
+    Vector<int> c;
 
-    std::vector<double> V = a.get_components();
+    std::vector<int> V = a.get_components();
     V[2] = 4.4;
 
     std::cout << V[2] << " " << a.get_components()[2] << std::endl;
